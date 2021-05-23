@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Калькулятор доходов</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/range.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:regular,700,900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="calc">
+         <div class="name">
+            <div class="name__icon"></div>
+            <div class="name__desc">Калькулятор доходности</div>
+         </div>
+         <div class="deposit">
+            <div class="title">Тип депозита</div>
+            <select name="deposit__select">
+               <option selected value="standart" date="0.7">Standart</option>
+               <option value="luxe" date="0.9">Premium</option>
+            </select>
+            <ul class="deposit__list">
+               <li class="deposit__item active">BTC</li>
+               <li class="deposit__item">UAH</li>
+               <li class="deposit__item">RUB</li>
+               <li class="deposit__item">EUR</li>
+               <li class="deposit__item">USD</li>
+            </ul>
+         </div>
+         <div class="invest">
+            <div class="title">Сумма инвестиции</div>
+            <div class="invest__content">
+               <div class="invest__range">
+                  <input type="range" min="0" max="10000" step="100" value="5000">
+               </div>
+               <div class="invest__desc">
+                  <span class="invest__sum">10000</span>
+                  <span class="invest__valute">BTC</span>
+               </div>
+            </div>
+         </div>
+         <div class="period">
+            <div class="title">Срок инвестиций (месяцев)</div>
+            <div class="period__content">
+               <div class="period__range">
+                  <input type="range" min="0" max="12" step="1" value="6">
+                  <ul class="period__list">
+                     <li class="period__item">1</li>
+                     <li class="period__item">2</li>
+                     <li class="period__item">3</li>
+                     <li class="period__item">4</li>
+                     <li class="period__item">5</li>
+                     <li class="period__item">6</li>
+                     <li class="period__item active">7</li>
+                     <li class="period__item">8</li>
+                     <li class="period__item">9</li>
+                     <li class="period__item">10</li>
+                     <li class="period__item">11</li>
+                     <li class="period__item">12</li>
+                  </ul>
+               </div>
+               <div class="period__desc">
+                  <div class="period__name">Процентная ставка</div>
+                  <div class="period__days"><span class="period__proc">0,75%</span> в день</div>
+               </div>
+            </div>
+         </div>
+         <div class="date">
+            <div class="date__start-invest">
+               <div class="title">Старт инвестиции</div>
+               <div class="date__calend-start">
+                  <span class="date__day">24</span>
+                  <span class="date__month">мая</span>
+                  <span class="date__year">2021</span>
+                  <input class="calendar" type="date">
+               </div>
+            </div>
+            <div class="date__end-invest">
+               <div class="title">Завершение инвестиции</div>
+               <div class="date__calend-end">
+                  <span class="date__day">24</span>
+                  <span class="date__month">июня</span>
+                  <span class="date__year">2021</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="visual">
+         <div class="visual__graf">
+            <div class="visual__invest">
+               <div class="title">Инвестировали</div>
+               <div class="visual__sum">10000 BTC</div>
+               <div class="visual__invest-graf"></div>
+            </div>
+            <div class="visual__stocs">
+               <div class="title">Получаете</div>
+               <div class="visual__sum">19150 BTC</div>
+               <div class="visual__stocs-sum">
+                  <div class="visual__stocs-graf"></div>
+                  <div class="visual__stocs-invest"></div>
+               </div>
+
+            </div>
+         </div>
+         <div class="visual__desc">
+            <div class="desc__invest">
+               <div class="desc__title">Инвестиция </div>
+               <div class="desk__info">
+                  <span class="desc__sum-invest">10000</span>
+                  <span class="desc__valute-invest">BTC</span>
+               </div>
+            </div>
+            <div class="desc__proc">
+               <div class="desc__title">Процент прибыли </div>
+               <div class="desc__proc-info">91,5%</div>
+            </div>
+            <div class="desc__stocs">
+               <div class="desc__title">Прибыль с инвестиции </div>
+               <div class="desc__stocs-info">
+                  <span class="desc__stocs-sum">9150</span>
+                  <span class="desc__stocs-valute">BTC</span>
+               </div>
+            </div>
+         </div>
+         <button class="btn-start-invest">инвестировать сейчас</button>
+      </div>
+
+   </div>
+
+</body>
+
+</html>

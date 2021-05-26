@@ -21,22 +21,22 @@
          <div class="deposit">
             <div class="title">Тип депозита</div>
             <select name="deposit__select">
-               <option selected value="standart" date="0.7">Standart</option>
-               <option value="luxe" date="0.9">Premium</option>
+               <option selected value="standart" date="1">Standart</option>
+               <option value="luxe" date="1.5">Premium</option>
             </select>
             <ul class="deposit__list">
-               <li class="deposit__item active">BTC</li>
-               <li class="deposit__item">UAH</li>
-               <li class="deposit__item">RUB</li>
-               <li class="deposit__item">EUR</li>
-               <li class="deposit__item">USD</li>
+               <li class="deposit__item active" date="0.75">BTC</li>
+               <li class="deposit__item" date="0.35">UAH</li>
+               <li class="deposit__item" date="0.15">RUB</li>
+               <li class="deposit__item" date="0.65">EUR</li>
+               <li class="deposit__item" date="0.45">USD</li>
             </ul>
          </div>
          <div class="invest">
             <div class="title">Сумма инвестиции</div>
             <div class="invest__content">
                <div class="invest__range">
-                  <input type="range" min="0" max="10000" step="100" value="5000">
+                  <input type="range" class="range-invest" min="0" max="10000" step="100" value="5000">
                </div>
                <div class="invest__desc">
                   <span class="invest__sum">10000</span>
@@ -48,7 +48,7 @@
             <div class="title">Срок инвестиций (месяцев)</div>
             <div class="period__content">
                <div class="period__range">
-                  <input type="range" min="0" max="12" step="1" value="6">
+                  <input type="range" class="range-period" min="1" max="12" step="1" value="6">
                   <ul class="period__list">
                      <li class="period__item">1</li>
                      <li class="period__item">2</li>
@@ -131,7 +131,7 @@
       </div>
 
    </div>
-
+<script src="js/script.js"></script>
 </body>
 
 </html>

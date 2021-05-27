@@ -20,9 +20,9 @@
          </div>
          <div class="deposit">
             <div class="title">Тип депозита</div>
-            <select name="deposit__select">
-               <option selected value="standart" date="1">Standart</option>
-               <option value="luxe" date="1.5">Premium</option>
+            <select class="deposit__select">
+               <option selected value="Standart" date="1">Standart</option>
+               <option value="Premium" date="1.5">Premium</option>
             </select>
             <ul class="deposit__list">
                <li class="deposit__item active" date="0.75">BTC</li>
@@ -36,11 +36,11 @@
             <div class="title">Сумма инвестиции</div>
             <div class="invest__content">
                <div class="invest__range">
-                  <input type="range" class="range-invest" min="0" max="10000" step="100" value="5000">
+                  <input type="range" class="range-invest" min="1000" max="10000" step="1000" value="5000">
                </div>
                <div class="invest__desc">
-                  <span class="invest__sum">10000</span>
-                  <span class="invest__valute">BTC</span>
+                  <span class="invest__sum" id="Invest">5000</span>
+                  <span class="invest__valute" id="Valute">BTC</span>
                </div>
             </div>
          </div>
@@ -55,8 +55,8 @@
                      <li class="period__item">3</li>
                      <li class="period__item">4</li>
                      <li class="period__item">5</li>
-                     <li class="period__item">6</li>
-                     <li class="period__item active">7</li>
+                     <li class="period__item active">6</li>
+                     <li class="period__item ">7</li>
                      <li class="period__item">8</li>
                      <li class="period__item">9</li>
                      <li class="period__item">10</li>
@@ -66,7 +66,7 @@
                </div>
                <div class="period__desc">
                   <div class="period__name">Процентная ставка</div>
-                  <div class="period__days"><span class="period__proc">0,75%</span> в день</div>
+                  <div class="period__days"><span class="period__proc">0.75%</span> в день</div>
                </div>
             </div>
          </div>
@@ -74,10 +74,7 @@
             <div class="date__start-invest">
                <div class="title">Старт инвестиции</div>
                <div class="date__calend-start">
-                  <span class="date__day">24</span>
-                  <span class="date__month">мая</span>
-                  <span class="date__year">2021</span>
-                  <input class="calendar" type="date">
+                  <input type="text" name="" id="" class="input__date" value="24 мая 2021">
                </div>
             </div>
             <div class="date__end-invest">
@@ -94,15 +91,21 @@
          <div class="visual__graf">
             <div class="visual__invest">
                <div class="title">Инвестировали</div>
-               <div class="visual__sum">10000 BTC</div>
-               <div class="visual__invest-graf"></div>
+               <div class="visual__sum">
+                  <span class="visual__sum-invest" id="Invest">5000</span>
+                  <span class="visual__valute-invest" id="Valute">BTC</span>
+               </div>
+               <div class="visual__invest-graf" id="visualInvest"></div>
             </div>
             <div class="visual__stocs">
                <div class="title">Получаете</div>
-               <div class="visual__sum">19150 BTC</div>
+               <div class="visual__sum">
+                  <span class="visual__sum-back">19150</span>
+                  <span class="visual__valute-back" id="Valute">BTC</span>
+               </div>
                <div class="visual__stocs-sum">
-                  <div class="visual__stocs-graf"></div>
-                  <div class="visual__stocs-invest"></div>
+                  <div class="visual__stocs-graf" id="visualStock"></div>
+                  <div class="visual__stocs-invest" id="visualInvest"></div>
                </div>
 
             </div>
@@ -111,8 +114,8 @@
             <div class="desc__invest">
                <div class="desc__title">Инвестиция </div>
                <div class="desk__info">
-                  <span class="desc__sum-invest">10000</span>
-                  <span class="desc__valute-invest">BTC</span>
+                  <span class="desc__sum-invest" id="Invest">5000</span>
+                  <span class="desc__valute-invest" id="Valute">BTC</span>
                </div>
             </div>
             <div class="desc__proc">
@@ -123,7 +126,7 @@
                <div class="desc__title">Прибыль с инвестиции </div>
                <div class="desc__stocs-info">
                   <span class="desc__stocs-sum">9150</span>
-                  <span class="desc__stocs-valute">BTC</span>
+                  <span class="desc__stocs-valute" id="Valute">BTC</span>
                </div>
             </div>
          </div>
@@ -131,7 +134,8 @@
       </div>
 
    </div>
-<script src="js/script.js"></script>
+   
+   <script src="js/script.js"></script>
 </body>
 
 </html>
